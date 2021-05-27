@@ -101,11 +101,11 @@ export function OTPInputComponent(props) {
         case "Backspace":
         case "Delete": {
           e.preventDefault();
+          
           if (otpValues[activeInput]) {
             changeCodeAtFocus("");
-          } else {
-            focusPrevInput();
           }
+          focusPrevInput();
           break;
         }
         case "ArrowLeft": {
